@@ -1,5 +1,5 @@
 // src/App.tsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import LetterGrid from './component/LetterGrid';
 import PostButton from './Button';
 
@@ -12,6 +12,10 @@ type Cell = {
 };
 
 const App: React.FC = () => {
+  useEffect(() => {
+    document.title = 'Wordle Solver';
+  }, []);
+
   const [cells, setCells] = useState<Cell[]>(
     Array.from({ length: TOTAL_CELLS }, () => ({ letter: '', colorIndex: 0 }))
   );
