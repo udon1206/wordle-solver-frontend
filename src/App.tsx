@@ -1,7 +1,7 @@
 // src/App.tsx
 import React, { useState, useEffect } from 'react';
 import LetterGrid from './component/LetterGrid';
-import PostButton from './Button';
+import PostButton from './component/Button';
 
 const GRID_SIZE = 5;
 const TOTAL_CELLS = GRID_SIZE * 6; // 5x6 に修正
